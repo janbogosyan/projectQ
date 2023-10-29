@@ -1,6 +1,12 @@
-/* .App {
+.App {
   text-align: center;
-} */
+}
+ .quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ }
+
 
 .App-logo {
   height: 40vmin;
