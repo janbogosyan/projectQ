@@ -36,13 +36,21 @@ function App() {
   
   return (
     <div className="App">
-      {isGameOver                                     // проверка първо дали играта е приключила преди да е започнала с тернален оператор
+      {isGameOver                                     // проверка първо дали играта е приключила (ще приключи след като свърши дължината на масива)
       ?
-        <>{scoreScreen}</>                            // и ще изпишем резултата
+        <>
+        {scoreScreen}                             
+        <button 
+        onClick={()=>{
+          setCurrentQuestionIndex(0);
+          setScore(0);
+          setSelectedAnswer('')
+        }}>Try Again</button>
+        </>
         : <>
         {/* ако всичко е ок влизаме в играта и изписваме първия въпроса на индекс 0  */}
           <h1>{currentQuestion.prompt}</h1>           
-
+      
           {/* {selectedAnswer} */}
         {/* след това в една форма правим следните неща */}
           <form 
